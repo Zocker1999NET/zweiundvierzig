@@ -13,7 +13,6 @@ hs_err_pid*
 
 # Greenfoot
 *.ctxt
-*.greenfoot
 .vscode/
 *~$*
 doc/
