@@ -1,3 +1,7 @@
+package zweiundvierzig;
+
+ 
+
 public class Debug5 extends Map_World {
     public Debug5() {
         super(
