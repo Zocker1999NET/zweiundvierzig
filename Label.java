@@ -14,9 +14,9 @@ public class Label extends GUI_Interface {
 	private String text = "";
 	
 	/**
-		Erstellt ein neues Label mit dem gegebenen Text und der zugehörigen Textgröße.
+		Erstellt ein neues Label mit dem gegebenen Text und der zugehoerigen Textgroeße.
 		@param txt Der darzustellende Text
-		@param size Die dazugehörige Textgröße
+		@param size Die dazugehoerige Textgroeße
 	*/
 	public Label(String txt, int size) {
 		text = txt;
@@ -25,15 +25,15 @@ public class Label extends GUI_Interface {
 	}
 	
 	/**
-		Gibt zurück, ob die Größe des Buttons von dem Text bestimmt werden soll.
+		Gibt zurueck, ob die Groeße des Buttons von dem Text bestimmt werden soll.
 		@return Wert der AutoSize-Eigenschaft
 	*/
 	public boolean getAutoSize() {
 		return autoSize;
 	}
 	/**
-		Legt fest, ob die Größe des Buttons von dem Text bestimmt werden soll.
-		Wird der Wert auf TRUE geändert, erfolgt automatisch ein Redraw des Objekts.
+		Legt fest, ob die Groeße des Buttons von dem Text bestimmt werden soll.
+		Wird der Wert auf TRUE geaendert, erfolgt automatisch ein Redraw des Objekts.
 		@param b Der neue Wert der AutoSize-Eigenschaft.
 	*/
 	public void setAutoSize(boolean b) {
@@ -44,16 +44,16 @@ public class Label extends GUI_Interface {
 	}
 	
 	/**
-		Gibt die aktelle Textgröße zurück.
-		@return Aktuelle Textgröße
+		Gibt die aktelle Textgroeße zurueck.
+		@return Aktuelle Textgroeße
 	*/
 	public int getTextSize() {
 		return textSize;
 	}
 	/**
-		Legt eine neue Textgröße fest.
-		@param s Neue Textgröße
-		@return Gibt an, ob sich die Textgröße geändert hat. Bei TRUE erfolgte bereits ein Redraw.
+		Legt eine neue Textgroeße fest.
+		@param s Neue Textgroeße
+		@return Gibt an, ob sich die Textgroeße geaendert hat. Bei TRUE erfolgte bereits ein Redraw.
 	*/
 	public boolean setTextSize(int s) {
 		if(textSize != s && s > 0) {
@@ -65,7 +65,7 @@ public class Label extends GUI_Interface {
 	}
 	
 	/**
-		Gibt den aktuellen Text zurück.
+		Gibt den aktuellen Text zurueck.
 		@return Der aktuelle Text
 	*/
 	public String getText() {
@@ -74,7 +74,7 @@ public class Label extends GUI_Interface {
 	/**
 		Setzt den darzustellenden Text auf den neuen Wert.
 		@param s Der neue Text
-		@return Gibt an, ob sich der Text geändert hat. Bei TRUE erfolgte bereits ein Redraw.
+		@return Gibt an, ob sich der Text geaendert hat. Bei TRUE erfolgte bereits ein Redraw.
 	*/
 	public boolean setText(String s) {
 		if(text != s) {

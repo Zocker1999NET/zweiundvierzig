@@ -4,7 +4,7 @@ import java.awt.Graphics2D;
 
 /**
 	Diese Klasse stellt einen Button dar.
-	Als funktionelles Vorbild dafür hält der Button aus dem .NET-Framework für UWP-Apps dar.
+	Als funktionelles Vorbild dafuer haelt der Button aus dem .NET-Framework fuer UWP-Apps dar.
 
 	@author Felix Stupp
 	@version 20.05.2016
@@ -17,9 +17,9 @@ public class Bildbutton extends GUI_Interface {
 	private ButtonEvent handler;
 	
 	/**
-		Erstellt einen Button mit dem gegebenen Text und der zugehörigen Textgröße.
+		Erstellt einen Button mit dem gegebenen Text und der zugehoerigen Textgroeße.
 		@param txt Der Text, den der Button darstellen soll.
-		@param size Die Textgröße, in der der Button den Text darstellen soll.
+		@param size Die Textgroeße, in der der Button den Text darstellen soll.
 	*/
 	public Bildbutton(GreenfootImage pict) {
 		picture = pict;
@@ -34,9 +34,9 @@ public class Bildbutton extends GUI_Interface {
 	    redrawInternal();
 	}
 	/**
-		Erstellt einen Button mit dem gegebenen Text, der zugehörigen Textgröße und dem gegebenen Objekt als Event-Handler.
+		Erstellt einen Button mit dem gegebenen Text, der zugehoerigen Textgroeße und dem gegebenen Objekt als Event-Handler.
 		@param txt Der Text, den der Button darstellen soll.
-		@param size Die Textgröße, in der der Button den Text darstellen soll.
+		@param size Die Textgroeße, in der der Button den Text darstellen soll.
 		@param h Der Handler mit dem Interface ButtonEvent implementiert.
 	*/
 	public Bildbutton(GreenfootImage pict, ButtonEvent h) {
@@ -47,7 +47,7 @@ public class Bildbutton extends GUI_Interface {
 	
 	/**
 		Fragt ab, ob ein Klick auf den Button gekommen ist.
-		Wird intern von Greenfoot benötigt.
+		Wird intern von Greenfoot benoetigt.
 	*/
 	public void act() {
 		if(Greenfoot.mouseClicked(this) && handler != this) {
@@ -56,15 +56,15 @@ public class Bildbutton extends GUI_Interface {
 	}
 	
 	/**
-		Gibt zurück, ob die Größe des Buttons von dem Text bestimmt werden soll.
+		Gibt zurueck, ob die Groeße des Buttons von dem Text bestimmt werden soll.
 		@return Wert der AutoSize-Eigenschaft
 	*/
 	public boolean getAutoSize() {
 		return autoSize;
 	}
 	/**
-		Legt fest, ob die Größe des Buttons von dem Text bestimmt werden soll.
-		Wird der Wert auf TRUE geändert, erfolgt automatisch ein Redraw des Objekts.
+		Legt fest, ob die Groeße des Buttons von dem Text bestimmt werden soll.
+		Wird der Wert auf TRUE geaendert, erfolgt automatisch ein Redraw des Objekts.
 		@param b Der neue Wert der AutoSize-Eigenschaft.
 	*/
 	public void setAutoSize(boolean b) {
@@ -75,7 +75,7 @@ public class Bildbutton extends GUI_Interface {
 	}
 	
 	/**
-		Gibt den aktuellen Text zurück.
+		Gibt den aktuellen Text zurueck.
 		@return Der aktuelle Text
 	*/
 	public GreenfootImage getPicture() {
@@ -84,7 +84,7 @@ public class Bildbutton extends GUI_Interface {
 	/**
 		Setzt den darzustellenden Text auf den neuen Wert.
 		@param s Der neue Text
-		@return Gibt an, ob sich der Text geändert hat. Bei TRUE erfolgte bereits ein Redraw.
+		@return Gibt an, ob sich der Text geaendert hat. Bei TRUE erfolgte bereits ein Redraw.
 	*/
 	public boolean setPicture(GreenfootImage s) {
 		if(picture != s) {
@@ -96,7 +96,7 @@ public class Bildbutton extends GUI_Interface {
 	}
 	
 	/**
-		Gibt den aktuellen EventHandler des Buttons zurück.
+		Gibt den aktuellen EventHandler des Buttons zurueck.
 		@return Der Handler als ButtonEvent
 	*/
 	public ButtonEvent getHandler() {
@@ -110,7 +110,7 @@ public class Bildbutton extends GUI_Interface {
 		handler = h;
 	}
 	/**
-		Entfernt den aktuellen EventHandler, um die Ausführung zukünftiger Events zu verhindern.
+		Entfernt den aktuellen EventHandler, um die Ausfuehrung zukuenftiger Events zu verhindern.
 	*/
 	public void removeHandler() {
 		handler = null;

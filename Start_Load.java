@@ -1,20 +1,20 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Beginnt neues Spiel/ lädt altes Spiel.
+ * Beginnt neues Spiel/ laedt altes Spiel.
  * 
  * @author 4ngelica 
  * @version 04.07.16
  */
 public class Start_Load extends World implements ButtonEvent 
 {
-    static String backgroundImage = "backgroundLight.png"; // Gibt an, welches Bild in allen Menüs als Hintergrund gewählt werden soll.
+    static String backgroundImage = "backgroundLight.png"; // Gibt an, welches Bild in allen Menues als Hintergrund gewaehlt werden soll.
     // Light Theme: "backgroundLight.png"
     // Dark Theme: "backgroundDark.png"
     
     Button chulien = new Button("Neues Spiel", 16 , this);
     Button spielanleitung = new Button("Spielanleitung", 16, this);
-    Button zurück = new Button("zurück", 16, this);
+    Button zurueck = new Button("zurueck", 16, this);
     /**
      * Constructor for objects of class Start_Load.
      * 
@@ -26,7 +26,7 @@ public class Start_Load extends World implements ButtonEvent
         setBackground(backgroundImage);
         chulien.setSize(100,50);
         spielanleitung.setSize(100,50);
-        zurück.setSize(100,50);
+        zurueck.setSize(100,50);
         addObject (chulien, (1600-chulien.getWidth())/2+100, (900-chulien.getHeight())/2);
         addObject (spielanleitung, (1600-spielanleitung.getWidth())/2+100, (900-spielanleitung.getHeight())/2 + 80);
         
@@ -45,13 +45,13 @@ public class Start_Load extends World implements ButtonEvent
        if (b == spielanleitung)
        {
           addObject (new Spielanleitung(), 800, 410);
-          addObject (zurück, 800 , 870);
+          addObject (zurueck, 800 , 870);
         }
         
-       if (b == zurück)
+       if (b == zurueck)
        {
            removeObjects(getObjects(Spielanleitung.class));
-           removeObject(zurück);
+           removeObject(zurueck);
         }
     }
     

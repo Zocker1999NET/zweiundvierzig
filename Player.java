@@ -33,17 +33,17 @@ public class Player extends Actor
         color = c;
         // redrawPlayer();
     }
-    //gibt die Spieler ID zurück
+    //gibt die Spieler ID zurueck
     public int getID()
     {
         return id;
     }
-    // gibt den Spielernamen zurück
+    // gibt den Spielernamen zurueck
     public String getDisplayName ()
     {
         return n;
     }
-    //gibt die Sternenanzahl zurück
+    //gibt die Sternenanzahl zurueck
     public int getStars()
     {
         return stars;
@@ -61,7 +61,7 @@ public class Player extends Actor
 
     // Von Felix: Methode nicht architektur-konform
 
-    /* // erhöht die Sternenzahl um eine random ausgewählte Anzahl von 1-3
+    /* // erhoeht die Sternenzahl um eine random ausgewaehlte Anzahl von 1-3
     public void addToStars()
     {
     int rand;
@@ -88,7 +88,7 @@ public class Player extends Actor
     stars+=add;
     System.out.println("Deine vorherige Sternenanzahl betrug " + pre + ".");
     System.out.println("Du hast " + add + " Sterne erhalten.");
-    System.out.println("Deine aktuelle Sternenanzahl beträgt " + stars + ".");
+    System.out.println("Deine aktuelle Sternenanzahl betraegt " + stars + ".");
     redrawPlayer();
     }
     } */
@@ -106,7 +106,7 @@ public class Player extends Actor
         redrawPlayer();
         return stars;
     }
-    //eine für das Testen gedachte Methode, die die Anzahl der Sterne auf ein gewünschtes Maß setzt
+    //eine fuer das Testen gedachte Methode, die die Anzahl der Sterne auf ein gewuenschtes Maß setzt
     public int setStars (int set)
     {
         stars = set;
@@ -114,7 +114,7 @@ public class Player extends Actor
         redrawPlayer();
         return stars;
     }
-    //eine Methode, die das Abziehen von Sternen testet und, wenn das Ergebnis >= 0 ist, die Sternenanzahl um eine gewählte Anzahl verringert
+    //eine Methode, die das Abziehen von Sternen testet und, wenn das Ergebnis >= 0 ist, die Sternenanzahl um eine gewaehlte Anzahl verringert
     public int removeFromStars(int sub)
     {
         stars -= sub;

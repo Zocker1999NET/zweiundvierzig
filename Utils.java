@@ -4,7 +4,7 @@ import java.util.*;
 import java.lang.Object;
 
 /**
-Diese Klasse enthält nur statische Funktionen, welche für euch als Unterstützung gedacht sind. Damit könnt ihr dann hoffentlich viele Code-Zeilen sparen. :)
+Diese Klasse enthaelt nur statische Funktionen, welche fuer euch als Unterstuetzung gedacht sind. Damit koennt ihr dann hoffentlich viele Code-Zeilen sparen. :)
 
 @author Zocker1999_NET
 @version 15.06.2016
@@ -12,7 +12,7 @@ Diese Klasse enthält nur statische Funktionen, welche für euch als Unterstütz
 public final class Utils {
 
 	/**
-	Kopiert ein boolean-Array und übergibt diese.
+	Kopiert ein boolean-Array und uebergibt diese.
 	@param a Das zu kopierende Array
 	@return Die Kopie des Arrays
 	 */
@@ -25,7 +25,7 @@ public final class Utils {
 	}
 
 	/**
-	Kopiert ein int-Array und übergibt diese.
+	Kopiert ein int-Array und uebergibt diese.
 	@param a Das zu kopierende Array
 	@return Die Kopie des Arrays
 	 */
@@ -38,7 +38,7 @@ public final class Utils {
 	}
 
 	/**
-	Kopiert ein String-Array und übergibt diese.
+	Kopiert ein String-Array und uebergibt diese.
 	@param a Das zu kopierende Array
 	@return Die Kopie des Arrays
 	 */
@@ -51,9 +51,9 @@ public final class Utils {
 	}
 
 	/**
-	Zeichnet innerhalb eines GreenfootImage ein gefülltes Rechteck in der gegebenen Farbe und mit dem gegebenen Abstand zum Rand.
+	Zeichnet innerhalb eines GreenfootImage ein gefuelltes Rechteck in der gegebenen Farbe und mit dem gegebenen Abstand zum Rand.
 	@param i Das GreenfootImage, in dem gezeichnet werden soll.
-	@param c Die Farbe, in der das gefüllte Rechteck gezeichnet werden soll.
+	@param c Die Farbe, in der das gefuellte Rechteck gezeichnet werden soll.
 	@param b Der Abstand zum Rand der Grafik.
 	 */
 	public static void drawInsideRectangle(GreenfootImage i, Color c, int b) {

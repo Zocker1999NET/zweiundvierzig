@@ -2,7 +2,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.awt.Color;
 
 /**
-	Oberklasse für sämtliche GUI Objekte, wie Labels und Buttons
+	Oberklasse fuer saemtliche GUI Objekte, wie Labels und Buttons
 	
 	@author Felix Stupp 
 	@version 04.06.2016
@@ -14,7 +14,7 @@ public abstract class GUI_Interface extends Actor
 	*/
 	protected int sx = 20;
 	/**
-		Die Höhe des Objektes
+		Die Hoehe des Objektes
 	*/
 	protected int sy = 20;
 	/**
@@ -27,24 +27,24 @@ public abstract class GUI_Interface extends Actor
 	protected Color foreC = Color.WHITE;
 	
 	/**
-		Gibt die Breite des Objektes zurück.
+		Gibt die Breite des Objektes zurueck.
 		@return Die aktuelle Breite
 	*/
 	public int getWidth() {
 		return sx;
 	}
 	/**
-		Gibt die Höhe des Objektes zurück.
-		@return Die aktuelle Höhe
+		Gibt die Hoehe des Objektes zurueck.
+		@return Die aktuelle Hoehe
 	*/
 	public int getHeight() {
 		return sy;
 	}
 	/**
-		Legt die Größe des Objektes neu fest und zeichnet es danach damit neu.
-		Je nach Objekttyp kann diese Größe wieder vom Objekt selbst angepasst werden, falls nötig.
+		Legt die Groeße des Objektes neu fest und zeichnet es danach damit neu.
+		Je nach Objekttyp kann diese Groeße wieder vom Objekt selbst angepasst werden, falls noetig.
 		@param w Die neue Breite
-		@param h Die neue Höhe
+		@param h Die neue Hoehe
 	*/
 	public void setSize(int w, int h) {
 		if(w < 1 || h < 1) {
@@ -56,7 +56,7 @@ public abstract class GUI_Interface extends Actor
 	}
 	
 	/**
-		Gibt die aktuelle Hintergrundfarbe des Objektes zurück.
+		Gibt die aktuelle Hintergrundfarbe des Objektes zurueck.
 		@return Die aktuelle Hintergrundfarbe als System.awt.Color
 	*/
 	public Color getBackColor() {
@@ -77,7 +77,7 @@ public abstract class GUI_Interface extends Actor
 	}
 	
 	/**
-		Gibt die aktuelle Vordergrundfarbe (meist die Textfarbe) des Objektes zurück.
+		Gibt die aktuelle Vordergrundfarbe (meist die Textfarbe) des Objektes zurueck.
 		@return Die aktuelle Vordergrundfarbe als System.awt.Color
 	*/
 	public Color getForeColor() {

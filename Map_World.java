@@ -23,16 +23,16 @@ public class Map_World extends GeneralMap
         armyMinimum = 3;
         
         /*
-        Hier werden später sämtliche Provinzen der Standard-Map erstellt.
+        Hier werden spaeter saemtliche Provinzen der Standard-Map erstellt.
         Dies funktioniert folgendermassen:
         =================================================================
 
-        Dieses kürzere Format ersetzt den langen Code und sorgt eventuell sogar für einen Geschwindigkeitsschub. Dabei sollte diesselbe Funktionalität erhalten bleiben.
+        Dieses kuerzere Format ersetzt den langen Code und sorgt eventuell sogar fuer einen Geschwindigkeitsschub. Dabei sollte diesselbe Funktionalitaet erhalten bleiben.
 
         provinces[<Provinz-ID>] = new Province(<Provinz-ID>,<Kontinent-ID>,<X-Position>,<Y-Position>,<Anzahl Sterne>,"<Anzeigename>", new int[] { <Liste aller Nachbarprovinzen> });
 
         =================================================================
-        Der Speicherplatz für provinces[0] bleibt leer, da es keine Provinz mit der ID 0 gibt!
+        Der Speicherplatz fuer provinces[0] bleibt leer, da es keine Provinz mit der ID 0 gibt!
 
         Und ja, ich weiss, dass das scheisse viel Schreibarbeit ist.
         Aber da muss man durch, wir habens auch hinbekommen :P
@@ -46,7 +46,7 @@ public class Map_World extends GeneralMap
 
         provinces = new Province[provinceCount + 1];
 
-        // Implementierung sämtlicher Provinzen
+        // Implementierung saemtlicher Provinzen
         // ACHTUNG! Gaaaaanz viel Code!
 
         // cID 1 - Nordamerika
@@ -58,7 +58,7 @@ public class Map_World extends GeneralMap
         provinces[6] =  new Province( 6 , 1 , 232 , 273 , 2 , "Oststaaten" , new int[] {4 , 5 , 7 , 8});
         provinces[7] =  new Province( 7 , 1 , 300 , 180 , 2 , "Quebec" , new int[] {4 , 6 , 9});
         provinces[8] =  new Province( 8 , 1 , 181 , 347 , 1 , "Mittelamerika" , new int[] {5 , 6 , 17});
-        provinces[9] =  new Province( 9 , 1 , 365 ,  55 , 1 , "Grönland" , new int[] {2 , 4 , 7 , 10});
+        provinces[9] =  new Province( 9 , 1 , 365 ,  55 , 1 , "Groenland" , new int[] {2 , 4 , 7 , 10});
 
         // cID 2 - Europa
         provinces[10] = new Province(10 , 2 , 454 , 142 , 1 , "Island" , new int[] {9 , 11 , 12});
@@ -67,7 +67,7 @@ public class Map_World extends GeneralMap
         provinces[13] = new Province(13 , 2 , 636 , 180 , 2 , "Russland" , new int[] {12 , 14 , 16 , 27 , 31 , 32});
         provinces[14] = new Province(14 , 2 , 528 , 232 , 2 , "Nordeuropa" , new int[] {11 , 12 , 13 , 15 , 16});
         provinces[15] = new Province(15 , 2 , 449 , 335 , 2 , "Westeuropa" , new int[] {11 , 14 , 16 , 25});
-        provinces[16] = new Province(16 , 2 , 537 , 296 , 2 , "Südeuropa" , new int[] {13 , 14 , 15 , 25 , 26 , 27});
+        provinces[16] = new Province(16 , 2 , 537 , 296 , 2 , "Suedeuropa" , new int[] {13 , 14 , 15 , 25 , 26 , 27});
 
         // cID 3 - Suedamerika
         provinces[17] = new Province(17 , 3 , 245 , 396 , 1 , "Venezuela" , new int[] {8 , 18 , 19});
@@ -77,17 +77,17 @@ public class Map_World extends GeneralMap
 
         // cID 4 - Afrika
         provinces[21] = new Province(21 , 4 , 680 , 630 , 1 , "Madagaskar" , new int[] {24 , 22});
-        provinces[22] = new Province(22 , 4 , 580 , 624 , 1 , "Südafrika" , new int[] {21 , 23 , 24});
+        provinces[22] = new Province(22 , 4 , 580 , 624 , 1 , "Suedafrika" , new int[] {21 , 23 , 24});
         provinces[23] = new Province(23 , 4 , 572 , 537 , 2 , "Zentralafrika" , new int[] {22 , 25 , 24});
         provinces[24] = new Province(24 , 4 , 632 , 500 , 2 , "Ostafrika" , new int[] {21 , 22 , 25 , 23 , 26});
         provinces[25] = new Province(25 , 4 , 491 , 444 , 1 , "Nordafrika" , new int[] {15 , 16 , 26 , 23 , 24});
-        provinces[26] = new Province(26 , 4 , 574 , 414 , 1 , "Ägypten" , new int[] {27 , 25 , 24 , 16});
+        provinces[26] = new Province(26 , 4 , 574 , 414 , 1 , "aegypten" , new int[] {27 , 25 , 24 , 16});
 
         // cID 5 - Asien
         provinces[27] = new Province(27 , 5 , 664 , 345 , 2 , "Mittlerer Osten" , new int[] {24 , 26 , 16 , 23 , 31 , 28});
         provinces[28] = new Province(28 , 5 , 784 , 370 , 2 , "Indien" , new int[] {29 , 31 , 27 , 30});
         provinces[29] = new Province(29 , 5 , 863 , 322 , 2 , "China" , new int[] {30 , 28 , 31 , 32 , 33 , 37});
-        provinces[30] = new Province(30 , 5 , 867 , 400 , 1 , "Südost Asien" , new int[] {29 , 39 , 28});
+        provinces[30] = new Province(30 , 5 , 867 , 400 , 1 , "Suedost Asien" , new int[] {29 , 39 , 28});
         provinces[31] = new Province(31 , 5 , 724 , 262 , 1 , "Afganistan" , new int[] {29 , 28 , 27 , 13 , 32});
         provinces[32] = new Province(32 , 5 , 740 , 163 , 1 , "Ural" , new int[] {29 , 33 , 31 , 13});
         provinces[33] = new Province(33 , 5 , 802 , 128 , 1 , "Sibirien" , new int[] {34 , 35 , 37 , 29 , 32});
@@ -137,7 +137,7 @@ public class Map_World extends GeneralMap
 				Spieler 2 ist als zweites dran; Hauptstadt:7
 				Spieler 3 ist als drittes dran und bekommt eine Karte; Hauptstadt:22
 				Spieler 4 ist als viertes dran und bekommt eine Karte; Hauptstadt:20
-				Spieler 5 ist als fünftes dran und bekommt zwei Karte; Hauptstadt:41
+				Spieler 5 ist als fuenftes dran und bekommt zwei Karte; Hauptstadt:41
 			*/
             dataL = new int[] {2,1,0,2,3,2,1,2,1,2,1,2,1,4,3,1,1,2,3,1,3,3,2,1,0,4,0,2,2,3,0,2,1,3,3,2,3,5,3,3,1,2,2,5,2,3,0,2,2,3,2,2,1,3,4,2,4,3,4,3,0,3,0,3,3,1,4,1,4,1,4,2,2,2,3,2,4,2,0,2,4,4,4,2};
 		}

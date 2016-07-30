@@ -1,7 +1,7 @@
 import greenfoot.*;
 
 /**
- * Dieses Interface stellt einen Zugriff auf Methoden für die Eventverarbeitung bei Buttons.
+ * Dieses Interface stellt einen Zugriff auf Methoden fuer die Eventverarbeitung bei Buttons.
  * Jede Klasse, die als Event-Handler dienen will, muss dieses Interface implementieren.
  * 
  * @author Felix Stupp 

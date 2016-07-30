@@ -2,8 +2,8 @@ import greenfoot.*;
 import java.awt.Color;
 
 /**
-	Erzeugt ein Eingabefeld, über welches man Strings vom Benutzer abfragen kann.
-	Die beim Erzeugen übergebene Welt wird nach dem "Schließen" des Eingabefelds wieder geladen.
+	Erzeugt ein Eingabefeld, ueber welches man Strings vom Benutzer abfragen kann.
+	Die beim Erzeugen uebergebene Welt wird nach dem "Schließen" des Eingabefelds wieder geladen.
 	
 	@author Felix Stupp
 	@version 07/10/2016
@@ -21,23 +21,23 @@ public class InputDialogWorld extends World implements ButtonEvent {
 	Boolean closed = false;
 	
 	/**
-		Erzeugt eine Instanz dieser Klasse, übergibt dieser die Parameter und wartet auf das Schließen des Dialogs.
-		@param msg Die für den Beutzer anzuzeigende Aufforderung.
-		@param preIn Ein Schattentext, welcher für den Benutzer in dem Textfeld sichtbar sein soll.
+		Erzeugt eine Instanz dieser Klasse, uebergibt dieser die Parameter und wartet auf das Schließen des Dialogs.
+		@param msg Die fuer den Beutzer anzuzeigende Aufforderung.
+		@param preIn Ein Schattentext, welcher fuer den Benutzer in dem Textfeld sichtbar sein soll.
 		@param w Die Welt, die nach dem Beenden wieder eingesetzt werden soll.
 	*/
 	public static String showDialog(String msg, String preIn, World w) {
 		InputDialogWorld dialog = new InputDialogWorld(msg,preIn);
 		Greenfoot.setWorld(dialog);
-		// Unvollständig!
+		// Unvollstaendig!
 		Greenfoot.setWorld(w);
 		return dialog.getInput();
 	}
 	
 	/**
 		Erzeugt ein Eingabefeld, welches nach dem Laden dargestellt wird.
-		@param msg Die für den Beutzer anzuzeigende Aufforderung.
-		@param preIn Ein Schattentext, welcher für den Benutzer in dem Textfeld sichtbar sein soll.
+		@param msg Die fuer den Beutzer anzuzeigende Aufforderung.
+		@param preIn Ein Schattentext, welcher fuer den Benutzer in dem Textfeld sichtbar sein soll.
 	*/
 	private InputDialogWorld(String msg, String preIn) {
 		super(500,200,1);

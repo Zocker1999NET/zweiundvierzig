@@ -26,7 +26,7 @@ public class Province extends Actor
     private GreenfootImage province;
     private boolean clicked = false;
     /**
-     * Überprüft, ob die Provinz angeklickt wurde.
+     * ueberprueft, ob die Provinz angeklickt wurde.
      */
     public void act() 
     {

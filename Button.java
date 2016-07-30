@@ -4,7 +4,7 @@ import java.awt.Graphics2D;
 
 /**
 	Diese Klasse stellt einen Button dar.
-	Als funktionelles Vorbild dafür hält der Button aus dem .NET-Framework für UWP-Apps dar.
+	Als funktionelles Vorbild dafuer haelt der Button aus dem .NET-Framework fuer UWP-Apps dar.
 
 	@author Felix Stupp
 	@version 20.05.2016
@@ -15,9 +15,9 @@ public class Button extends Bildbutton {
 	private String text = "";
 	
 	/**
-		Erstellt einen Button mit dem gegebenen Text und der zugehörigen Textgröße.
+		Erstellt einen Button mit dem gegebenen Text und der zugehoerigen Textgroeße.
 		@param txt Der Text, den der Button darstellen soll.
-		@param size Die Textgröße, in der der Button den Text darstellen soll.
+		@param size Die Textgroeße, in der der Button den Text darstellen soll.
 	*/
 	public Button(String txt, int size) {
 	    super(new GreenfootImage(txt,size,Color.WHITE,Color.BLACK));
@@ -34,9 +34,9 @@ public class Button extends Bildbutton {
 		redraw();
 	}
 	/**
-		Erstellt einen Button mit dem gegebenen Text, der zugehörigen Textgröße und dem gegebenen Objekt als Event-Handler.
+		Erstellt einen Button mit dem gegebenen Text, der zugehoerigen Textgroeße und dem gegebenen Objekt als Event-Handler.
 		@param txt Der Text, den der Button darstellen soll.
-		@param size Die Textgröße, in der der Button den Text darstellen soll.
+		@param size Die Textgroeße, in der der Button den Text darstellen soll.
 		@param h Der Handler mit dem Interface ButtonEvent implementiert.
 	*/
 	public Button(String txt, int size, ButtonEvent h) {
@@ -47,16 +47,16 @@ public class Button extends Bildbutton {
 	}
 	
 	/**
-		Gibt die aktelle Textgröße zurück.
-		@return Aktuelle Textgröße
+		Gibt die aktelle Textgroeße zurueck.
+		@return Aktuelle Textgroeße
 	*/
 	public int getTextSize() {
 		return textSize;
 	}
 	/**
-		Legt eine neue Textgröße fest.
-		@param s Neue Textgröße
-		@return Gibt an, ob sich die Textgröße geändert hat. Bei TRUE erfolgte bereits ein Redraw.
+		Legt eine neue Textgroeße fest.
+		@param s Neue Textgroeße
+		@return Gibt an, ob sich die Textgroeße geaendert hat. Bei TRUE erfolgte bereits ein Redraw.
 	*/
 	public boolean setTextSize(int s) {
 		if(textSize != s && s > 0) {
@@ -68,7 +68,7 @@ public class Button extends Bildbutton {
 	}
 	
 	/**
-		Gibt den aktuellen Text zurück.
+		Gibt den aktuellen Text zurueck.
 		@return Der aktuelle Text
 	*/
 	public String getText() {
@@ -77,7 +77,7 @@ public class Button extends Bildbutton {
 	/**
 		Setzt den darzustellenden Text auf den neuen Wert.
 		@param s Der neue Text
-		@return Gibt an, ob sich der Text geändert hat. Bei TRUE erfolgte bereits ein Redraw.
+		@return Gibt an, ob sich der Text geaendert hat. Bei TRUE erfolgte bereits ein Redraw.
 	*/
 	public boolean setText(String s) {
 		if(text != s) {

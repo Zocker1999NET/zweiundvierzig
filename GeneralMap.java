@@ -7,8 +7,8 @@ import javax.swing.JOptionPane;
 import java.awt.Color;
 
 /**
-Oberklasse für verschiedene Maps;
-neue Maps werden als Unterklasse dieser Klasse eingefügt.
+Oberklasse fuer verschiedene Maps;
+neue Maps werden als Unterklasse dieser Klasse eingefuegt.
 
 @author GruenerWal, MaxiJohl, Felix Stupp, Samuel
 @version 0.3.0
@@ -17,7 +17,7 @@ public abstract class GeneralMap extends World implements ButtonEvent
 {
     /*
     Felder, im Moment nur Anzahl der Provinzen
-    Später evtl. weitere Werte wie Schwierigkeit denkbar
+    Spaeter evtl. weitere Werte wie Schwierigkeit denkbar
      */
     Button modus = new Button("Kampf\nbeginnen",25,this);
 
@@ -26,8 +26,8 @@ public abstract class GeneralMap extends World implements ButtonEvent
 
     /*
     Die einzelnen Positionen der Provinzen wird mit SCALE_VALUE/10000 multipliziert.
-    Dies ist nützlich, wenn die Karte beispielsweise nur noch 80% der Originalgröße bei ihrer Darstellung groß ist.
-    Bei diesem Beispiel wäre hier, neben dem Offset oben, der Wert 0.8 einzutragen.
+    Dies ist nuetzlich, wenn die Karte beispielsweise nur noch 80% der Originalgroeße bei ihrer Darstellung groß ist.
+    Bei diesem Beispiel waere hier, neben dem Offset oben, der Wert 0.8 einzutragen.
      */
     private final double SCALE_VALUE = 1;
 
@@ -52,7 +52,7 @@ public abstract class GeneralMap extends World implements ButtonEvent
     private Label statLabel2 = new Label("Lade Statistiken ...",20);
 
     /**
-    Erstellt eine GeneralMap mit allen Eigenschaften und initialisiert die Arrays für Provinzen und Spieler.
+    Erstellt eine GeneralMap mit allen Eigenschaften und initialisiert die Arrays fuer Provinzen und Spieler.
     @param backImage Das Hintergrundbild, welches von dieser Klasse geladen und dargestellt wird.
     @param playerList Die Liste mit den Namen der Spieler
     @param colorList Die Liste mit den Farben der Spieler
@@ -99,7 +99,7 @@ public abstract class GeneralMap extends World implements ButtonEvent
 
         if(status == GameStates.KAMPF)
         {
-            GreenfootImage GameStates = new GreenfootImage("KAMPF!!! Wähle die Provinzen aus, die kämpfen sollen, " + getPlayerName() + ".",textSize,new Color(255,255,255),new Color(0,0,0));
+            GreenfootImage GameStates = new GreenfootImage("KAMPF!!! Waehle die Provinzen aus, die kaempfen sollen, " + getPlayerName() + ".",textSize,new Color(255,255,255),new Color(0,0,0));
             GreenfootImage GameStatesEmpty = new GreenfootImage(GameStates.getWidth(),textSize);
             GameStatesEmpty.drawImage(GameStates,0,0);
             GreenfootImage States = new GreenfootImage("MapWorldFight.png");
@@ -108,7 +108,7 @@ public abstract class GeneralMap extends World implements ButtonEvent
         }
         if(status == GameStates.VERSCHIEBEN)
         {
-            GreenfootImage GameStates = new GreenfootImage("VERSCHIEBEN! Wähle die Provinzen aus, bei denen du schubsen möchtest, " + getPlayerName() + ".",textSize,new Color(255,255,255),new Color(0,0,0));
+            GreenfootImage GameStates = new GreenfootImage("VERSCHIEBEN! Waehle die Provinzen aus, bei denen du schubsen moechtest, " + getPlayerName() + ".",textSize,new Color(255,255,255),new Color(0,0,0));
             GreenfootImage GameStatesEmpty = new GreenfootImage(GameStates.getWidth(),textSize);
 
             GameStatesEmpty.drawImage(GameStates,0,0);
@@ -118,7 +118,7 @@ public abstract class GeneralMap extends World implements ButtonEvent
         }
         if(status == GameStates.SETZEN)
         {
-            GreenfootImage GameStates = new GreenfootImage("SETZEN! Wähle die Provinz aus, der du schenken möchtest, " + getPlayerName() + ".",textSize,new Color(255,255,255),new Color(0,0,0)); // "Setzten" Lern Deutsch, Samuel
+            GreenfootImage GameStates = new GreenfootImage("SETZEN! Waehle die Provinz aus, der du schenken moechtest, " + getPlayerName() + ".",textSize,new Color(255,255,255),new Color(0,0,0)); // "Setzten" Lern Deutsch, Samuel
             GreenfootImage GameStatesEmpty = new GreenfootImage(GameStates.getWidth(),textSize);
             GameStatesEmpty.drawImage(GameStates,0,0);
             GreenfootImage States = new GreenfootImage("MapWorld.png");
@@ -149,7 +149,7 @@ public abstract class GeneralMap extends World implements ButtonEvent
     }
 
     /**
-    Fügt alle Provinzen aus dem Array der Welt an der entsprechden Stelle zu.
+    Fuegt alle Provinzen aus dem Array der Welt an der entsprechden Stelle zu.
      */
     protected void initProvinces() {
         for(int i = 1; i < provinces.length; i++) {
@@ -225,7 +225,7 @@ public abstract class GeneralMap extends World implements ButtonEvent
     }
 
     /**
-    Gibt den Namen des Spielers aus, dem dessen ID gehört.
+    Gibt den Namen des Spielers aus, dem dessen ID gehoert.
     @param plID Die ID des zu findenden Spielers
     @return Der Name des Spielers
      */
@@ -235,7 +235,7 @@ public abstract class GeneralMap extends World implements ButtonEvent
     }
 
     /**
-    Gibt die Anzahl der Sterne des aktuellen Spielers zurück.
+    Gibt die Anzahl der Sterne des aktuellen Spielers zurueck.
     @return Die Anzahl der Sterne des aktuellen Spielers
      */
     public int getPlayerStars()
@@ -244,7 +244,7 @@ public abstract class GeneralMap extends World implements ButtonEvent
     }
 
     /**
-    Gibt die ID des Spielers zurück, dem die gefragte Provinz gehört.
+    Gibt die ID des Spielers zurueck, dem die gefragte Provinz gehoert.
     @param prID Die gefragte Provinz
      */
     public int getProvinceOwner(int prID)
@@ -256,7 +256,7 @@ public abstract class GeneralMap extends World implements ButtonEvent
     }
 
     /**
-    Gibt eine Liste mit allen Provinzen und deren Besitzern zurück.
+    Gibt eine Liste mit allen Provinzen und deren Besitzern zurueck.
     @return Array mit der Provinz-ID als Index und dem Besitzer als Wert
      */
     public int[] getProvinceOwners()
@@ -269,9 +269,9 @@ public abstract class GeneralMap extends World implements ButtonEvent
     }
 
     /**
-    Zählt die Anzahl der Einheiten von allen Provinzen zusammen, die einem bestimmten Spieler gehört.
-    @param playerID Die ID des Spielers, für den die Einheiten gezählt werden sollen.
-    @return Die Anzahl der Einheiten, die dem Spieler gehören.
+    Zaehlt die Anzahl der Einheiten von allen Provinzen zusammen, die einem bestimmten Spieler gehoert.
+    @param playerID Die ID des Spielers, fuer den die Einheiten gezaehlt werden sollen.
+    @return Die Anzahl der Einheiten, die dem Spieler gehoeren.
      */
     public int getPlayerEntityCount(int playerID)
     {
@@ -327,7 +327,7 @@ public abstract class GeneralMap extends World implements ButtonEvent
                 giveRandomStars(players[currentPlayer]);
                 status=GameStates.VERSCHIEBEN;
                 savedProvince = null;
-                modus.setText("Nächster\nSpieler");
+                modus.setText("Naechster\nSpieler");
             } else if (status==GameStates.VERSCHIEBEN) {
                 freeArmies = -1;
                 if(currentPlayer >= players.length-1)
@@ -374,7 +374,7 @@ public abstract class GeneralMap extends World implements ButtonEvent
             }
             offenderProvince = p;
             p.redrawProvince(2);
-            // System.out.println("Die Provinz " + provinces[i].getDisplayName() + " wurde als angreifende Provinz ausgewählt! Sie gehört Spieler" + provinces[i].getOwner());
+            // System.out.println("Die Provinz " + provinces[i].getDisplayName() + " wurde als angreifende Provinz ausgewaehlt! Sie gehoert Spieler" + provinces[i].getOwner());
             chooser();
         }
     }
@@ -386,7 +386,7 @@ public abstract class GeneralMap extends World implements ButtonEvent
         }
         defenderProvince = p;
         p.redrawProvince(3);
-        // System.out.println("Die Provinz " + provinces[i].getDisplayName() + " wurde als verteidigende Provinz ausgewählt! Sie gehört Spieler" + provinces[i].getOwner());
+        // System.out.println("Die Provinz " + provinces[i].getDisplayName() + " wurde als verteidigende Provinz ausgewaehlt! Sie gehoert Spieler" + provinces[i].getOwner());
         chooser();
     }
 
@@ -403,12 +403,12 @@ public abstract class GeneralMap extends World implements ButtonEvent
             defenderProvince = null;
             return;
         }
-        //System.out.println("Es wird gewürfelt!");        
+        //System.out.println("Es wird gewuerfelt!");        
         Dice_Offender diceOffender = new Dice_Offender();
-        // System.out.println("Der Angreifer ereichte folgende Würfelzahlen:"); 
+        // System.out.println("Der Angreifer ereichte folgende Wuerfelzahlen:"); 
         int[] maxDiceOffenderArray = diceOffender.dice_offender(offenderProvince.getEntityCount());
         Dice_Defender diceDefender = new Dice_Defender();
-        // System.out.println("Der Verteidiger ereichte folgende Würfelzahlen:");
+        // System.out.println("Der Verteidiger ereichte folgende Wuerfelzahlen:");
         int[] maxDiceDefenderArray = diceDefender.dice_defender(defenderProvince.getEntityCount());
         Arrays.sort(maxDiceOffenderArray);
         Arrays.sort(maxDiceDefenderArray);
@@ -440,13 +440,13 @@ public abstract class GeneralMap extends World implements ButtonEvent
                 }
             }
         }
-        JOptionPane.showMessageDialog(null,"Es wurde gewürfelt. Der Angreifer erreichte folgende Würfelzahlen: " + maxDiceOffender + "\nDer Verteidiger erreichte diese Würfelzahlen: " + maxDiceDefender);
+        JOptionPane.showMessageDialog(null,"Es wurde gewuerfelt. Der Angreifer erreichte folgende Wuerfelzahlen: " + maxDiceOffender + "\nDer Verteidiger erreichte diese Wuerfelzahlen: " + maxDiceDefender);
         diceOffender = null;
         diceDefender = null;
         decider(maxDiceOffenderArray, maxDiceDefenderArray);
     }
 
-    // berechnet Zahlen und findet Gewinner; führt Konsequenz aus
+    // berechnet Zahlen und findet Gewinner; fuehrt Konsequenz aus
     private void decider(int[] maxDiceOffender, int [] maxDiceDefender)
     {
         Player offPl = players[offenderProvince.getOwner()];
@@ -464,7 +464,7 @@ public abstract class GeneralMap extends World implements ButtonEvent
                 defenderProvince.setEntityCount(1);
                 offPl.gotProvince();
                 defPl.lostProvince();
-                JOptionPane.showMessageDialog(null,"Somit gewinnt der Angreifer (" + getPlayerName(offenderProvince.getOwner()) + "). Die Provinz gehört fortan dem Angreifer (" + getPlayerName(offenderProvince.getOwner()) + ").");
+                JOptionPane.showMessageDialog(null,"Somit gewinnt der Angreifer (" + getPlayerName(offenderProvince.getOwner()) + "). Die Provinz gehoert fortan dem Angreifer (" + getPlayerName(offenderProvince.getOwner()) + ").");
             } else {
                 JOptionPane.showMessageDialog(null,"Somit gewinnt der Angreifer (" + getPlayerName(offenderProvince.getOwner()) + "). Dem Verteidiger (" + getPlayerName(defenderProvince.getOwner()) + ") wird eine Einheit abgezogen. Er hat nun noch " + defenderProvince.getEntityCount() + " Einheiten.");
             }
@@ -505,7 +505,7 @@ public abstract class GeneralMap extends World implements ButtonEvent
 
     /**
     Nimmt zwei Provinzen entgegen, und fragt, wieviele Einheiten vom ersten zum zweiten Eintrag verschoben werden sollen.
-    Überprüft, ob eine Verschiebung möglich ist und führt sie bei Erfolg aus.
+    ueberprueft, ob eine Verschiebung moeglich ist und fuehrt sie bei Erfolg aus.
      */
     private void moveEntities(Province sourceProvince, Province destinationProvince)
     {
@@ -526,14 +526,14 @@ public abstract class GeneralMap extends World implements ButtonEvent
 
         else if ( (sourceProvince.getEntityCount() - entitiesToMove) <= 0)
         {
-            JOptionPane.showMessageDialog(null,"Du hast nicht genügend Einheiten, um die gewünschte Anzahl von " + sourceProvince.getDisplayName() + " nach " + destinationProvince.getDisplayName() + " zu verschieben, Köhler.");
+            JOptionPane.showMessageDialog(null,"Du hast nicht genuegend Einheiten, um die gewuenschte Anzahl von " + sourceProvince.getDisplayName() + " nach " + destinationProvince.getDisplayName() + " zu verschieben, Koehler.");
         }
     }
 
     /**
     Speichert ein gegebene Provinz als savedProvince ein, insofern dieser Platz nicht bereits belegt ist.
-    Ist er das, so wird überprüft, ob eine neue, an savedProvince angrenzende Provinz angeklickt wurde.
-    Ist dies der Fall, werden beide Provinzen an moveEntities übergeben.
+    Ist er das, so wird ueberprueft, ob eine neue, an savedProvince angrenzende Provinz angeklickt wurde.
+    Ist dies der Fall, werden beide Provinzen an moveEntities uebergeben.
      */
     private void useProvincesToMove(Province givenProvince)
     {
@@ -592,7 +592,7 @@ public abstract class GeneralMap extends World implements ButtonEvent
                 }
                 else
                 {
-                    JOptionPane.showMessageDialog(null,"Nicht genügend freie Einheiten.");
+                    JOptionPane.showMessageDialog(null,"Nicht genuegend freie Einheiten.");
                 }
             }
         }
@@ -619,7 +619,7 @@ public abstract class GeneralMap extends World implements ButtonEvent
             // Provinzen des aktuellen Kontinents durchgehen
             for ( int p = 1; p >= continentArray.length; p++ )
             {
-                // Prüfen, ob eine Provinz NICHT dem aktuellen Spieler gehört
+                // Pruefen, ob eine Provinz NICHT dem aktuellen Spieler gehoert
                 if ( continentArray[p].getOwner() != currentPlayer )
                 {
                     break;
@@ -662,7 +662,7 @@ public abstract class GeneralMap extends World implements ButtonEvent
                 }
                 if ( starsToUse < 0 && starsToUse > 10 )
                 {
-                    JOptionPane.showMessageDialog(null,"Ungültige Zahl. Bitte eine Zahl zwischen 0 und 10 eingeben");
+                    JOptionPane.showMessageDialog(null,"Ungueltige Zahl. Bitte eine Zahl zwischen 0 und 10 eingeben");
                 }
             }
             else
@@ -697,7 +697,7 @@ public abstract class GeneralMap extends World implements ButtonEvent
     }
 
     /**
-     * Gibt einem Spieler eine zufällige Anzahl an Sternen zwischen 1 und 3.
+     * Gibt einem Spieler eine zufaellige Anzahl an Sternen zwischen 1 und 3.
      * 
      * @param player Der Spieler, dem die Sterne gegeben werden
      */
